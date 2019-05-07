@@ -1,0 +1,3 @@
+lib_utilities.c:12:6:run_current_time	0	static
+lib_utilities.c:16:10:get_current_time	0	static
+lib_utilities.c:20:10:elapsed_time	0	static

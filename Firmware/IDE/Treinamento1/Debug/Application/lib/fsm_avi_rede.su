@@ -1,0 +1,5 @@
+fsm_avi_rede.c:27:9:recebe_modelo_frame	0	static
+fsm_avi_rede.c:32:9:recebe_id_frame	0	static
+fsm_avi_rede.c:37:9:recebe_dados_frame	0	static
+fsm_avi_rede.c:46:9:frame_decodificado	0	static
+fsm_avi_rede.c:51:6:exec_decodificador_avirede	0	static

@@ -1,0 +1,5 @@
+bsp_led.c:32:9:bsp_led_requisita	8	static
+bsp_led.c:66:6:liga_led	0	static
+bsp_led.c:71:6:desliga_led	0	static
+bsp_led.c:76:6:configura_led	0	static
+bsp_led.c:83:6:bsp_led_fsm_run	8	static
