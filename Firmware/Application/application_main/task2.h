@@ -11,6 +11,8 @@
 #include "lib_utilities.h"
 #include "fsm_avi_rede.h"
 #include "bsp_led.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 #define NUMERO_DADOS_VETOR              11
 

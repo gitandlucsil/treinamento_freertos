@@ -19,6 +19,7 @@ void task_1(void *args)
                 30,
                 150,
                 3);
+        taskYIELD();
     }
 }
 

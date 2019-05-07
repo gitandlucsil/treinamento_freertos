@@ -35,5 +35,6 @@ void task_2(void *args)
                 }
             }
         }
+        taskYIELD();
 	}
 }

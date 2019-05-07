@@ -9,7 +9,8 @@
 #define APPLICATION_MAIN_TASK1_H_
 #include "stdint.h"
 #include "bsp_led.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
 
 
 void task_1(void *args);
