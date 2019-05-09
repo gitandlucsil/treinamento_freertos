@@ -13,6 +13,7 @@
 #include "bsp_led.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "application_main.h"
 
 #define NUMERO_DADOS_VETOR              11
 

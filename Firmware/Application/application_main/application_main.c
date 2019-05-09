@@ -14,6 +14,19 @@ TaskHandle_t xTask2Handle = NULL;
 StaticTask_t xTask2Buffer;
 StackType_t xTask2Stack[TASK2_STACK_SIZE];
 
+TaskHandle_t get_task_handle(uint8_t task_number)
+{
+	TaskHandle_t result = NULL;
+	switch(task_number){
+	case 1:
+		result = xTask1Handle;
+		break;
+	case 2:
+		result = xTask2Handle;
+		break;
+	}
+	return result;
+}
 void app_run(void)
 {
     /* Create the task without using any dynamic memory allocation. */

@@ -6,11 +6,12 @@
  */
 #include "task1.h"
 
-
+TaskHandle_t taskToSuspend = NULL;
 void task_1(void *args)
 {
 
     while(1){
+    	taskToSuspend = get_task_handle(2);
         bsp_led_fsm_run();
         bsp_led_requisita(
                 1,
@@ -19,7 +20,8 @@ void task_1(void *args)
                 30,
                 150,
                 3);
-        taskYIELD();
+        vTaskSuspend(taskToSuspend);
+        //vTaskDelay(10);
     }
 }
 

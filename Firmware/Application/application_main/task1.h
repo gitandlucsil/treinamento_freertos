@@ -11,6 +11,7 @@
 #include "bsp_led.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "application_main.h"
 
 
 void task_1(void *args);

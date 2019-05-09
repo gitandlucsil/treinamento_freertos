@@ -1,3 +1,4 @@
-application_main.c:17:6:app_run	24	static
-application_main.c:47:6:vApplicationGetIdleTaskMemory	0	static
-application_main.c:74:6:vApplicationGetTimerTaskMemory	0	static
+application_main.c:17:14:get_task_handle	0	static
+application_main.c:30:6:app_run	24	static
+application_main.c:60:6:vApplicationGetIdleTaskMemory	0	static
+application_main.c:87:6:vApplicationGetTimerTaskMemory	0	static
