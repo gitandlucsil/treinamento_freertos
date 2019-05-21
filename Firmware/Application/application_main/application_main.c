@@ -10,9 +10,9 @@ TaskHandle_t xTask1Handle = NULL;
 StaticTask_t xTask1Buffer;
 StackType_t xTask1Stack[TASK1_STACK_SIZE];
 
-TaskHandle_t xTask2Handle = NULL;
-StaticTask_t xTask2Buffer;
-StackType_t xTask2Stack[TASK2_STACK_SIZE];
+TaskHandle_t xDecodificationTaskHandle = NULL;
+StaticTask_t xDecodificationTaskBuffer;
+StackType_t xDecodificationTaskStack[DECODIFICATION_TASK_STACK_SIZE];
 
 TaskHandle_t get_task_handle(uint8_t task_number)
 {
@@ -22,7 +22,7 @@ TaskHandle_t get_task_handle(uint8_t task_number)
 		result = xTask1Handle;
 		break;
 	case 2:
-		result = xTask2Handle;
+		result = xDecodificationTaskHandle;
 		break;
 	}
 	return result;
@@ -39,14 +39,14 @@ void app_run(void)
                   xTask1Stack,           /* Array to use as the task's stack. */
                   &xTask1Buffer);        /* Variable to hold the task's data structure. */
     /* Create the task without using any dynamic memory allocation. */
-    xTask2Handle = xTaskCreateStatic(
-                  task_2,                /* Function that implements the task. */
-                  "TASK2",               /* Text name for the task. */
-                  TASK2_STACK_SIZE,      /* Number of indexes in the xStack array. */
+    xDecodificationTaskHandle = xTaskCreateStatic(
+                  decodification_task,                /* Function that implements the task. */
+                  "DecodificationTask",               /* Text name for the task. */
+				  DECODIFICATION_TASK_STACK_SIZE,      /* Number of indexes in the xStack array. */
                   (void *) NULL,         /* Parameter passed into the task. */
-                  TASK2_PRIORITY,        /* Priority at which the task is created. */
-                  xTask2Stack,           /* Array to use as the task's stack. */
-                  &xTask2Buffer);        /* Variable to hold the task's data structure. */
+				  DECODIFICATION_TASK_PRIORITY,        /* Priority at which the task is created. */
+                  xDecodificationTaskStack,           /* Array to use as the task's stack. */
+                  &xDecodificationTaskBuffer);        /* Variable to hold the task's data structure. */
 
     vTaskStartScheduler();
 

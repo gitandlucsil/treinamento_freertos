@@ -5,8 +5,8 @@
  *      Author: andre
  */
 
-#ifndef APPLICATION_MAIN_TASK2_H_
-#define APPLICATION_MAIN_TASK2_H_
+#ifndef APPLICATION_MAIN_DECODIFICATION_TASK_H_
+#define APPLICATION_MAIN_DECODIFICATION_TASK_H_
 #include "stdint.h"
 #include "lib_utilities.h"
 #include "fsm_avi_rede.h"
@@ -20,6 +20,8 @@
 /* The queue is to be created to hold a maximum of 10 uint8_t variables. */
 #define DECODER_QUEUE_LENGTH    10
 #define DECODER_ITEM_SIZE       sizeof(uint8_t)
-void task_2(void *args);
 
-#endif /* APPLICATION_MAIN_TASK2_H_ */
+uint8_t envia_dados_decodificador(uint8_t dado);
+void decodification_task(void *args);
+
+#endif /* APPLICATION_MAIN_DECODIFICATION_TASK_H_ */
