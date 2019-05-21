@@ -15,5 +15,6 @@
 
 
 void task_1(void *args);
+uint8_t valor_conhecido(uint8_t valor);
 
 #endif /* APPLICATION_MAIN_TASK1_H_ */

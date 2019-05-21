@@ -12,9 +12,22 @@ volatile uint8_t modeloDecodificado = 0;
 volatile uint8_t idDecodificado = 0;
 volatile uint8_t dadosDecodificados[255];
 volatile uint8_t nDadosDecodificado = 0;
+/* The variable used to hold the queue's data structure. */
+static StaticQueue_t decoderStaticQueue;
+/* The array to use as the queue's storage area.  This must be at least uxQueueLength * uxItemSize bytes. */
+uint8_t decoderQueueStorageArea[DECODER_QUEUE_LENGTH * DECODER_ITEM_SIZE];
+QueueHandle_t decoderQueueHandle;
+
 
 void task_2(void *args)
 {
+    /* Create a queue capable of containing 10 uint8_t values. */
+	decoderQueueHandle = xQueueCreateStatic( DECODER_QUEUE_LENGTH,
+											 DECODER_ITEM_SIZE,
+											 decoderQueueStorageArea,
+											 &decoderStaticQueue );
+    /* decoderQueueStorageArea was not NULL so decoderQueueHandle should not be NULL. */
+    configASSERT( decoderQueueHandle );
 	while(1){
         if(run == TRUE){
             run = FALSE;

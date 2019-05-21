@@ -1,3 +1,4 @@
+tasks.c:1797:20:prvTaskIsTaskSuspended	0	static
 tasks.c:3333:8:prvIdleTask	0	static
 tasks.c:3879:13:prvResetNextTaskUnblockTime	0	static
 tasks.c:821:13:prvInitialiseNewTask	32	static
@@ -5,6 +6,7 @@ tasks.c:3545:13:prvInitialiseTaskLists	16	static
 tasks.c:1072:13:prvAddNewTaskToReadyList	8	static
 tasks.c:5080:13:prvAddCurrentTaskToDelayedList	16	static
 tasks.c:578:15:xTaskCreateStatic	40	static
+tasks.c:1843:7:vTaskResume	16	static
 tasks.c:1967:6:vTaskStartScheduler	40	static
 tasks.c:2089:6:vTaskEndScheduler	8	static
 tasks.c:2100:6:vTaskSuspendAll	0	static
@@ -17,13 +19,14 @@ tasks.c:2173:12:xTaskResumeAll	16	static
 tasks.c:1249:7:vTaskDelayUntil	16	static
 tasks.c:1333:7:vTaskDelay	8	static
 tasks.c:2946:6:vTaskSwitchContext	4	static
+tasks.c:1696:7:vTaskSuspend	16	static
 tasks.c:3019:6:vTaskPlaceOnEventList	8	static
 tasks.c:3036:6:vTaskPlaceOnUnorderedEventList	8	static
 tasks.c:3093:12:xTaskRemoveFromEventList	16	static
 tasks.c:3161:6:vTaskRemoveFromUnorderedEventList	16	static
 tasks.c:3195:6:vTaskSetTimeOutState	8	static
 tasks.c:3207:6:vTaskInternalSetTimeOutState	0	static
-tasks.c:3215:12:xTaskCheckForTimeOut	16	static
+tasks.c:3215:12:xTaskCheckForTimeOut	24	static
 tasks.c:3278:6:vTaskMissedYield	0	static
 tasks.c:3492:7:vTaskSetThreadLocalStoragePointer	0	static
 tasks.c:3508:8:pvTaskGetThreadLocalStoragePointer	0	static

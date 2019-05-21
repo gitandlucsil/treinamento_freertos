@@ -14,9 +14,12 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "application_main.h"
+#include "queue.h"
 
 #define NUMERO_DADOS_VETOR              11
-
+/* The queue is to be created to hold a maximum of 10 uint8_t variables. */
+#define DECODER_QUEUE_LENGTH    10
+#define DECODER_ITEM_SIZE       sizeof(uint8_t)
 void task_2(void *args);
 
 #endif /* APPLICATION_MAIN_TASK2_H_ */

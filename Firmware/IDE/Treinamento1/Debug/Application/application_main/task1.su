@@ -1,1 +1,2 @@
-task1.c:10:6:task_1	16	static
+task1.c:29:9:valor_conhecido	0	static
+task1.c:35:6:task_1	8	static
