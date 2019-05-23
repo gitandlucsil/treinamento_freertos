@@ -49,6 +49,7 @@ void decodification_task(void *args)
 											 &decoderStaticQueue );
     /* decoderQueueStorageArea was not NULL so decoderQueueHandle should not be NULL. */
     configASSERT( decoderQueueHandle );
+    bsp_uart_configure();
 	while(1){
 	    if(xQueueReceive(decoderQueueHandle,&dataReceived,(TickType_t)10) == pdTRUE){
             exec_decodificador_avirede(dataReceived);

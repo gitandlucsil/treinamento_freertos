@@ -15,6 +15,7 @@
 #include "task.h"
 #include "application_main.h"
 #include "queue.h"
+#include "bsp_uart.h"
 
 #define NUMERO_DADOS_VETOR              11
 /* The queue is to be created to hold a maximum of 10 uint8_t variables. */
