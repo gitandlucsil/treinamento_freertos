@@ -64,8 +64,8 @@ void bsp_uart_configure(void)
     USART1->BRR |= tmp2 & 0x0000FFFF;
 
     USART1->SR &= ~(USART_SR_TXE | USART_SR_TC | USART_SR_RXNE | USART_SR_ORE);
-    //USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_RXNEIE;
-    USART1->CR1 |= USART_CR1_RXNEIE;
+    USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_RXNEIE;
+    //USART1->CR1 |= USART_CR1_RXNEIE;
     /********************************************
      * Configure NVIC UART1 interrupt.               *
      ********************************************/
