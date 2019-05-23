@@ -1,0 +1,2 @@
+bsp_uart.c:15:6:USART1_IRQHandler	8	static
+bsp_uart.c:36:6:bsp_uart_configure	0	static

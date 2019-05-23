@@ -22,6 +22,7 @@
 #define DECODER_ITEM_SIZE       sizeof(uint8_t)
 
 uint8_t envia_dados_decodificador(uint8_t dado);
+uint8_t envia_dados_decodificador_isr(uint8_t dado);
 void decodification_task(void *args);
 
 #endif /* APPLICATION_MAIN_DECODIFICATION_TASK_H_ */

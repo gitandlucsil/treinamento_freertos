@@ -30,6 +30,16 @@ uint8_t envia_dados_decodificador(uint8_t dado)
 	}
 	return result;
 }
+uint8_t envia_dados_decodificador_isr(uint8_t dado)
+{
+    uint8_t resultado = FALSE;
+    if(decoderQueueHandle != NULL){
+        if(xQueueSendFromISR(decoderQueueHandle, &dado, NULL) == pdTRUE){
+            resultado = TRUE;
+        }
+    }
+    return resultado;
+}
 void decodification_task(void *args)
 {
     /* Create a queue capable of containing 10 uint8_t values. */
